@@ -37,12 +37,25 @@ body {
 }
 
 .sweet-modal {
+  height: 100%;
+
   .sweet-title {
     text-align: left;
     border-bottom: 1px solid #f5f5f5 !important;
 
     h2 {
       font-weight: 300 !important;
+    }
+  }
+
+  .sweet-box-actions {
+    .sweet-action-close {
+      transition: all 0.5s ease;
+
+      &:hover {
+        background: transparent !important;
+        color: #e20031 !important;
+      }
     }
   }
 }

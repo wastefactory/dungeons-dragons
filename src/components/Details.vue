@@ -1,8 +1,31 @@
 <template>
-  <sweet-modal ref="modal" width="800" v-bind:title="name">
+  <sweet-modal ref="modal" v-bind:title="name" width="100%">
     <div class="details-container">
+      <!-- <div>
+        Hit Die: {{hit_die}}
+      </div> -->
       <div>
-        Hit Die: {{details.hit_die}}
+        Skill Proficiencies:
+        <div class="row box-container">
+          <div class="col-xs-12 col-sm-6" v-for="data in details.proficiencies">
+            <div class="box">{{data.name}}</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        Skill Proficiency Choices:
+        <div class="row box-container" v-for="data in details.proficiency_choices">
+          <!-- <div>Number of skill choices: {{data.choose}}</div> -->
+          <div class="col-xs-12 col-sm-6" v-if="data.from[0].from" v-for="choices in data.from[0].from">
+            <div class="box">{{choices.name}}</div>
+          </div>
+          <div class="col-xs-12 col-sm-6" v-if="data.from[1].from" v-for="choices in data.from[1].from">
+            <div class="box">{{choices.name}}</div>
+          </div>
+          <div class="col-xs-12 col-sm-6" v-if="!data.from[0].from && !data.from[1].from" v-for="choices in data.from">
+            <div class="box">{{choices.name}}</div>
+          </div>
+        </div>
       </div>
     </div>
     <vue-progress-bar></vue-progress-bar>
@@ -21,7 +44,10 @@ export default {
   },
   data () {
     return {
+      id: null,
       name: null,
+      hit_die: null,
+      startingequipment: {},
       details: {}
     }
   },
@@ -41,7 +67,10 @@ export default {
       this.name = data.name
       this.details = {}
       api.get(data.url).then(response => {
+        this.hit_die = response.hit_die
+        this.id = response.index
         this.details = response
+        console.log(response)
         this.$Progress.finish()
       })
     }
@@ -52,5 +81,16 @@ export default {
 <style scoped lang="scss">
   .details-container {
     min-height: 300px;
+
+    .box-container {
+      padding-bottom: 30px;
+
+      .box {
+        background: #f1f1f1;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 3px;
+      }
+    }
   }
 </style>
