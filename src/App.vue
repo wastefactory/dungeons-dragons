@@ -58,5 +58,24 @@ body {
       }
     }
   }
+
+  ul.sweet-modal-tabs {
+    margin-top: 10px !important;
+    border-bottom: 1px solid #f5f5f5 !important;
+
+    li.sweet-modal-tab a {
+      transition: all 0.5s ease;
+    }
+
+    li.sweet-modal-tab.active a {
+      border-radius: 3px;
+      font-weight: 300 !important;
+      background-color: #fbfbfb;
+    }
+    // a {
+    //   background: #fafafa;
+    //   margin: 10px;
+    // }
+  }
 }
 </style>

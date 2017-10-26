@@ -1,46 +1,59 @@
 <template>
   <sweet-modal ref="modal" v-bind:title="name" width="100%">
-    <div class="details-container">
-      <!-- <div>
-        Hit Die: {{hit_die}}
-      </div> -->
-      <div>
-        Skill Proficiencies:
-        <div class="row box-container">
-          <div class="col-xs-12 col-sm-6" v-for="data in details.proficiencies">
-            <div class="box">{{data.name}}</div>
+    <sweet-modal-tab title="Skill Proficiencies" id="tab1">
+      <div class="details-container">
+        <div>
+          Hit Die: {{hit_die}}
+        </div>
+        <div>
+          Skill Proficiencies:
+          <div class="row box-container">
+            <div class="col-xs-12 col-sm-6" v-for="data in details.proficiencies">
+              <div class="box">{{data.name}}</div>
+            </div>
           </div>
         </div>
       </div>
-      <div>
-        Skill Proficiency Choices:
-        <div class="row box-container" v-for="data in details.proficiency_choices">
-          <!-- <div>Number of skill choices: {{data.choose}}</div> -->
-          <div class="col-xs-12 col-sm-6" v-if="data.from[0].from" v-for="choices in data.from[0].from">
-            <div class="box">{{choices.name}}</div>
-          </div>
-          <div class="col-xs-12 col-sm-6" v-if="data.from[1].from" v-for="choices in data.from[1].from">
-            <div class="box">{{choices.name}}</div>
-          </div>
-          <div class="col-xs-12 col-sm-6" v-if="!data.from[0].from && !data.from[1].from" v-for="choices in data.from">
-            <div class="box">{{choices.name}}</div>
+    </sweet-modal-tab>
+  	<sweet-modal-tab title="Skill Proficiency Choices" id="tab2">
+      <div class="details-container">
+        <div>
+          Skill Proficiency Choices:
+          <div class="row box-container" v-for="data in details.proficiency_choices">
+            <div class="col-xs-12 col-sm-6" v-if="data.from[0].from" v-for="choices in data.from[0].from">
+              <div class="box">{{choices.name}}</div>
+            </div>
+            <div class="col-xs-12 col-sm-6" v-if="data.from[1].from" v-for="choices in data.from[1].from">
+              <div class="box">{{choices.name}}</div>
+            </div>
+            <div class="col-xs-12 col-sm-6" v-if="!data.from[0].from && !data.from[1].from" v-for="choices in data.from">
+              <div class="box">{{choices.name}}</div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </sweet-modal-tab>
+  	<sweet-modal-tab title="Starting Equipment" id="tab3">
+      <div class="details-container">
+        <div>
+          Starting Equipment:
+        </div>
+      </div>
+    </sweet-modal-tab>
     <vue-progress-bar></vue-progress-bar>
   </sweet-modal>
 </template>
 
 <script>
-import { SweetModal } from 'sweet-modal-vue'
+import { SweetModal, SweetModalTab } from 'sweet-modal-vue'
 import api from '@/services/api'
 import { EventBus } from '@/utils/eventBus'
 
 export default {
   name: 'app',
   components: {
-    SweetModal
+    SweetModal,
+    SweetModalTab
   },
   data () {
     return {
