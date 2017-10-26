@@ -58,6 +58,9 @@ Object.keys(proxyTable).forEach(function (context) {
   app.use(proxyMiddleware(options.filter || context, options))
 })
 
+// proxy api to http://dnd5eapi.co
+app.use('/api', proxyMiddleware({target: 'http://dnd5eapi.co', changeOrigin: true}))
+
 // handle fallback for HTML5 history API
 app.use(require('connect-history-api-fallback')())
 
