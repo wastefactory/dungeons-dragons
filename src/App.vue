@@ -19,7 +19,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 body {
   margin: 0;
 }
@@ -34,5 +34,16 @@ body {
 
 .row {
   margin:0;
+}
+
+.sweet-modal {
+  .sweet-title {
+    text-align: left;
+    border-bottom: 1px solid #f5f5f5 !important;
+
+    h2 {
+      font-weight: 300 !important;
+    }
+  }
 }
 </style>

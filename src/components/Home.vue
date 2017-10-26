@@ -28,6 +28,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
  .banner {
+   display: flex;
+   align-items: center;
+   justify-content: center;
    background: #eee;
    height: 400px;
  }
