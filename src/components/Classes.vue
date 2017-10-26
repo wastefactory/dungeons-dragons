@@ -1,7 +1,7 @@
 <template>
   <div class="row">
-    <div class="col-xs-12 col-sm-2">
-      <div class="box">Class list</div>
+    <div class="col-xs-12 col-sm-2" v-for="classData in classes">
+      <div class="box">{{classData.name}}</div>
     </div>
   </div>
 </template>
@@ -26,7 +26,12 @@ export default {
 
 <style scoped lang="scss">
   .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: #f1f1f1;
-    height: 150px;
+    margin: 15px;
+    height: 100px;
+    border-radius: 3px
   }
 </style>
