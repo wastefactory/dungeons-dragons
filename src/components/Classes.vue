@@ -48,10 +48,11 @@ export default {
       margin: 15px;
       height: 100px;
       border-radius: 3px;
-      transition: background-color 0.5s ease;
+      transition: all 0.7s ease;
 
       &:hover {
-        background: #ddd;
+        background: #e20031;
+        color: white;
       }
     }
   }

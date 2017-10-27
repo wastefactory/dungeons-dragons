@@ -8,7 +8,7 @@ import router from './router'
 import VueProgressBar from 'vue-progressbar'
 
 Vue.use(VueProgressBar, {
-  color: 'rgb(143, 255, 199)',
+  color: '#e20031',
   failedColor: 'red',
   height: '2px'
 })

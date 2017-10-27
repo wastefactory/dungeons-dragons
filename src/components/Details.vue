@@ -140,7 +140,7 @@ export default {
       // padding-bottom: 30px;
 
       .box {
-        background: #f1f1f1;
+        background: #f7f7f7;
         padding: 10px;
         margin: 10px;
         border-radius: 3px;

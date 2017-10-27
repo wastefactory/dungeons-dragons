@@ -20,6 +20,7 @@ export default {
 </script>
 
 <style lang="scss">
+$brand-color: #a91333;
 body {
   margin: 0;
 }
@@ -32,6 +33,11 @@ body {
   text-align: center;
 }
 
+h3 {
+  font-weight: 400;
+  font-size:25px;
+}
+
 .row {
   margin:0;
 }
@@ -42,6 +48,7 @@ body {
   .sweet-title {
     text-align: left;
     border-bottom: 1px solid #f5f5f5 !important;
+    color: $brand-color;
 
     h2 {
       font-weight: 300 !important;
@@ -65,11 +72,13 @@ body {
 
     li.sweet-modal-tab a {
       transition: all 0.5s ease;
+      color: #555 !important;
     }
 
     li.sweet-modal-tab.active a {
       border-radius: 3px;
       font-weight: 300 !important;
+      color: $brand-color !important;
       background-color: #fbfbfb;
     }
     // a {
