@@ -4,6 +4,7 @@
       <div class="box" @click="classDetails(classData)">{{classData.name}}</div>
     </div>
     <class-details />
+    <vue-progress-bar></vue-progress-bar>
   </div>
 </template>
 
@@ -23,7 +24,9 @@ export default {
     }
   },
   mounted () {
+    this.$Progress.start()
     api.get('/api/classes').then(response => {
+      this.$Progress.finish()
       this.classes = response.results
     })
   },
