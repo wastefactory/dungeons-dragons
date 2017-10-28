@@ -38,6 +38,11 @@ h3 {
   font-size:25px;
 }
 
+h4 {
+  font-weight: 400;
+  font-size:15px;
+}
+
 .row {
   margin:0;
 }
@@ -73,18 +78,21 @@ h3 {
     li.sweet-modal-tab a {
       transition: all 0.5s ease;
       color: #555 !important;
+
+      div {
+        padding: 5px;
+      }
     }
 
     li.sweet-modal-tab.active a {
       border-radius: 3px;
       font-weight: 300 !important;
       color: $brand-color !important;
-      background-color: #fbfbfb;
+
+      div {
+        border-bottom: 1px solid;
+      }
     }
-    // a {
-    //   background: #fafafa;
-    //   margin: 10px;
-    // }
   }
 }
 </style>
