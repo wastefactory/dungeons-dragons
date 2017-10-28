@@ -14,7 +14,7 @@ import Details from '@/components/Details'
 import { EventBus } from '@/utils/eventBus'
 
 export default {
-  name: 'app',
+  name: 'Classes',
   components: {
     classDetails: Details
   },

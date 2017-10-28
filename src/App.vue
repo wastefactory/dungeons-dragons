@@ -95,4 +95,41 @@ h4 {
     }
   }
 }
+
+.details-container {
+  min-height: 300px;
+
+  .title {
+    font-weight: 400;
+    text-transform: capitalize;
+    text-align: left;
+    border-left: 2px solid #a91333;
+    background: #f7f7f7;
+    padding: 10px;
+
+    h4 {
+      margin: 0px;
+    }
+  }
+
+  .box-container {
+    padding-bottom: 30px;
+
+    .empty {
+      text-align: center;
+      padding: 20px 10px;
+      color: #ccc;
+    }
+
+    .box {
+      background: #fafafa;
+      padding: 10px;
+      margin: 15px 0px;
+      border-radius: 0px 3px 3px 0px;
+      padding-left: 20px;
+      text-align: left;
+      border-left: 2px solid #f1f1f1;
+    }
+  }
+}
 </style>
