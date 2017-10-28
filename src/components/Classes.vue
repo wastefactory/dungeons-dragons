@@ -1,7 +1,7 @@
 <template>
   <div class="row class-container">
     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" v-for="classData in classes">
-      <div class="box" @click="classDetails(classData)">{{classData.name}}</div>
+      <div class="box animated slideInUp" @click="classDetails(classData)">{{classData.name}}</div>
     </div>
     <class-details />
     <vue-progress-bar></vue-progress-bar>
