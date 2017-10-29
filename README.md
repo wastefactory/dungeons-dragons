@@ -19,7 +19,7 @@ or by just downloading the zip file.
 > npm install
 ```
 
-This will install the local dependencies.
+This will install all dependencies.
 
 #### Local webpack dev server
 To start the local webpack development server:
@@ -32,7 +32,7 @@ This will start a local webserver and build the static assets on port 3000
 
 #### Running unit tests
 
-``` bash
+```
 > npm run unit
 ```
 
