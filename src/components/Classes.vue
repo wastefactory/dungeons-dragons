@@ -1,10 +1,15 @@
 <template>
-  <div class="row class-container">
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" v-for="classData in classes">
-      <div class="box animated slideInUp" @click="classDetails(classData)">{{classData.name}}</div>
+  <div>
+    <div class="class-title">
+      <span>Classes</span>
     </div>
-    <class-details />
-    <vue-progress-bar></vue-progress-bar>
+    <div class="row class-container">
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" v-for="classData in classes">
+        <div class="box animated slideInUp" @click="classDetails(classData)">{{classData.name}}</div>
+      </div>
+      <class-details />
+      <vue-progress-bar></vue-progress-bar>
+    </div>
   </div>
 </template>
 
@@ -39,6 +44,16 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  $brand: #ed6868;
+  .class-title {
+    padding: 20px 0px 50px;
+    color: #ed6868;
+    span {
+      border-bottom: 1px solid;
+      padding: 0px 8px 5px;
+    }
+  }
+
   .class-container {
     min-height: 250px;
 
@@ -52,10 +67,12 @@ export default {
       height: 100px;
       border-radius: 3px;
       transition: all 0.7s ease;
+      border: 1px solid #eee;
 
       &:hover {
-        background: #e20031;
-        color: white;
+        // background: $brand;
+        color: $brand;
+        border-color: rgba(237,104,104,.4);
       }
     }
   }

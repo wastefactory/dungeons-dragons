@@ -10,13 +10,14 @@
 
 <style scoped lang="scss">
   .footer {
-    background: #f1f1f1;
+    background: white;
+    border-top: 1px solid #f5f5f5;
     padding: 20px;
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 100%;
     text-align: left;
     font-size: 12px;
-    color: #555;
+    color: #ed6868;
   }
 </style>

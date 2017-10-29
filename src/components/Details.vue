@@ -66,10 +66,12 @@ export default {
     },
     openModal (data) {
       this.$refs.modal.open('modal')
-      this.$Progress.start()
       this.reset()
-
       this.name = data.name
+
+      setTimeout(() => {
+        this.$Progress.start()
+      }, 300)
       api.get(data.url).then(response => {
         this.id = response.index
         this.details = response

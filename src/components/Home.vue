@@ -4,6 +4,9 @@
       <div class="intro">
         <h3>{{title}}</h3>
         <div class="description">{{description}}</div>
+        <div class="cta">
+          <a class="btn" href="http://dnd.wizards.com/" target="_blank">Learn more</a>
+        </div>
       </div>
     </div>
     <div class="content">
@@ -22,8 +25,8 @@ export default {
   },
   data () {
     return {
-      title: 'Welcome to Dungeons & Dragons',
-      description: 'Take a closer look at this legendary fantasy role-playing game and find out why millions of players worldwide have stepped into the boots of mighty heroes to create their own stories.'
+      title: 'YOUR ADVENTURE AWAITS',
+      description: `Play Dungeons & Dragons online, at your local game store, or in your living room—it's your story.`
     }
   }
 }
@@ -31,22 +34,36 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
- .banner {
+  $brand: #ed6868;
+  $gradient: #f97256;
+
+  .banner {
    display: flex;
    align-items: center;
    justify-content: center;
-   background: #f5f5f5;
+   background: #ed6868;
    height: 400px;
-   padding: 0px 50px;
-   color: #a91333;
+   color: white;
+   text-align: left;
+   background: $brand;
+   background: -webkit-linear-gradient(left top, $brand, $gradient);
+   background: -o-linear-gradient(left top, $brand, $gradient);
+   background: -moz-linear-gradient(left top, $brand, $gradient);
+   background: linear-gradient(left top, $brand, $gradient);
 
    .intro {
-     width: 800px;
+     width: 100%;
+     padding: 0px 100px;
+
      .description {
-       color: #777;
+       color: white;
+     }
+
+     .cta {
+       padding: 20px 0px;
      }
    }
- }
+  }
 
  .content {
    padding: 30px 10px;

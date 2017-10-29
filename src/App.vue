@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <app-header/>
+    <app-header :status="scrolled"/>
     <router-view/>
     <app-footer/>
   </div>
@@ -15,12 +15,28 @@ export default {
   components: {
     appHeader: Navbar,
     appFooter: Footer
+  },
+  data () {
+    return {
+      scrolled: false
+    }
+  },
+  methods: {
+    handleScroll () {
+      this.scrolled = window.scrollY > 5
+    }
+  },
+  created () {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>
 
 <style lang="scss">
-$brand-color: #a91333;
+$brand-color: #ed6868;
 body {
   margin: 0;
 }
@@ -31,6 +47,25 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  color: #555;
+}
+
+.btn {
+  background: white;
+  border: 0px;
+  padding: 15px;
+  min-width: 150px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 100px;
+  font-size: 15px;
+  text-decoration: none;
+  color: #555;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: $brand-color;
+  }
 }
 
 h3 {
@@ -53,7 +88,8 @@ h4 {
   .sweet-title {
     text-align: left;
     border-bottom: 1px solid #f5f5f5 !important;
-    color: $brand-color;
+    color: white;
+    background: #e15656;
 
     h2 {
       font-weight: 300 !important;
@@ -63,10 +99,11 @@ h4 {
   .sweet-box-actions {
     .sweet-action-close {
       transition: all 0.5s ease;
+      color: white !important;
 
       &:hover {
         background: transparent !important;
-        color: #e20031 !important;
+        color: #b53838 !important;
       }
     }
   }
@@ -103,7 +140,7 @@ h4 {
     font-weight: 400;
     text-transform: capitalize;
     text-align: left;
-    border-left: 2px solid #a91333;
+    border-left: 2px solid #ed6868;
     background: #f7f7f7;
     padding: 10px;
 
