@@ -2,7 +2,7 @@
   <div class="details-container">
     <div>
       <div class="title">
-        <h4>Starting Equipment:</h4>
+        <h4>Starting Equipment</h4>
       </div>
       <div class="row box-container">
         <div class="col-xs-12 col-sm-4 col-sm-3 col-lg-2" v-for="data in this.equipments.starting_equipment">
