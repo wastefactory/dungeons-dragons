@@ -13,9 +13,6 @@ npm run dev
 
 # run unit tests
 npm run unit
-
-# run all tests
-npm test
 ```
 
 
