@@ -2,7 +2,7 @@
 
 > A Vue.js project
 
-### There are two methods for getting started with this repo.
+### There are two methods to get started with this repo.
 
 #### Using Git
 
