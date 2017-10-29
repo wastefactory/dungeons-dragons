@@ -30,7 +30,7 @@ To start the local webpack development server:
 
 This will start a local webserver and build the static assets on port 3000
 
-## Build Setup
+## Running unit tests
 
 ``` bash
 # run unit tests
