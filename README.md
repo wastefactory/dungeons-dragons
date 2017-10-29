@@ -2,7 +2,7 @@
 
 > A Vue.js project
 
-## There are two methods for getting started with this repo.
+### There are two methods for getting started with this repo.
 
 #### Using Git
 
@@ -12,7 +12,7 @@
 
 or by just downloading the zip file.
 
-### Local npm installation
+#### Local npm installation
 
 ```
 > cd dungeons-dragons
@@ -21,7 +21,7 @@ or by just downloading the zip file.
 
 This will install the local dependencies.
 
-### Local webpack dev server
+#### Local webpack dev server
 To start the local webpack development server:
 
 ```
@@ -30,11 +30,10 @@ To start the local webpack development server:
 
 This will start a local webserver and build the static assets on port 3000
 
-## Running unit tests
+#### Running unit tests
 
 ``` bash
-# run unit tests
-npm run unit
+> npm run unit
 ```
 
 
